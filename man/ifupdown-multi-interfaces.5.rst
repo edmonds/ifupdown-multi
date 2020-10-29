@@ -113,7 +113,7 @@ FILES
 `/etc/network/interfaces`
  System-wide network interface configuration. See **interfaces**\(5).
 
-`/var/run/network/ifupdown-multi.*`
+`/run/network/ifupdown-multi.*`
  State information used by **ifupdown-multi**.
 
 SEE ALSO

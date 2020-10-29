@@ -37,7 +37,7 @@ additional_keys = (
     'IF_MULTI_PREFERRED_PREFIXES',
 )
 
-fname_prefix = '/var/run/network/ifupdown-multi.'
+fname_prefix = '/run/network/ifupdown-multi.'
 fname_nexthop = fname_prefix + '%(IFACE)s.nexthop.%(ADDRFAM)s'
 fname_rules = fname_prefix + '%(IFACE)s.rules.%(ADDRFAM)s'
 
@@ -61,7 +61,7 @@ def mkdir(dname):
 
 class ifupdownMulti:
     def __init__(self, env):
-        mkdir('/var/run/network')
+        mkdir('/run/network')
 
         self.cfg = {}
         for key in required_keys:
