@@ -1,5 +1,5 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Source: git://github.com/farsightsec/ifupdown-multi
+Source: https://github.com/edmonds/ifupdown-multi
 
 Files: *
 Copyright: 2013, Farsight Security, Inc.
