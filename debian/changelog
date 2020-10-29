@@ -1,3 +1,13 @@
+ifupdown-multi (1.0.0) unstable; urgency=medium
+
+  * README.md: fix name of multi_gateway_preferred_prefixes option in
+    caveats
+  * ifupdown-multi.py: Port to Python 3 (Closes: #943060)
+  * /var/run -> /run
+  * Update packaging
+
+ -- Robert Edmonds <edmonds@debian.org>  Wed, 28 Oct 2020 22:22:56 -0400
+
 ifupdown-multi (0.1.1) unstable; urgency=low
 
   * Initial release. (Closes: #724452)
