@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Copyright (c) 2013 by Farsight Security, Inc.
 #
@@ -57,7 +57,7 @@ def mkdir(dname):
     if not os.path.isdir(dname):
         rc = run('mkdir %s' % dname)
         if rc != 0:
-            raise Exception, 'unable to create directory %s' % dname
+            raise Exception('unable to create directory %s' % dname)
 
 class ifupdownMulti:
     def __init__(self, env):
@@ -65,18 +65,18 @@ class ifupdownMulti:
 
         self.cfg = {}
         for key in required_keys:
-            if env.has_key(key):
+            if key in env:
                 self.cfg[key] = env[key]
             else:
-                raise Exception, 'missing environment variable %s' % key
+                raise Exception('missing environment variable %s' % key)
         for key in additional_keys:
-            if env.has_key(key):
+            if key in env:
                 if key == 'IF_MULTI_GATEWAY_WEIGHT' and self.cfg['ADDRFAM'] == 'inet6':
                     logging.warning('multi_gateway_weight not supported with IPv6')
                 else:
                     self.cfg[key] = env[key]
         if not self.cfg['MODE'] in ('start', 'stop'):
-            raise Exception, 'unknown ifupdown mode %s' % self.cfg['MODE']
+            raise Exception('unknown ifupdown mode %s' % self.cfg['MODE'])
         if self.cfg['ADDRFAM'] == 'inet':
             self.cfg['ip'] = 'ip'
         elif self.cfg['ADDRFAM'] == 'inet6':
@@ -146,7 +146,7 @@ class ifupdownMulti:
                     nexthop = f.readline().strip()
                     if nexthop:
                         run('%s route delete %s' % (self.cfg['ip'], nexthop))
-            except IOError, e:
+            except IOError as e:
                 if e.errno != errno.ENOENT:
                     raise
 
