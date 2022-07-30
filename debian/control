@@ -3,7 +3,7 @@ Section: admin
 Priority: optional
 Maintainer: Robert Edmonds <edmonds@debian.org>
 Build-Depends: debhelper-compat (= 13), dh-python, python3
-Standards-Version: 4.5.0
+Standards-Version: 4.6.0
 Vcs-Git: https://github.com/edmonds/ifupdown-multi.git
 Vcs-Browser: https://github.com/edmonds/ifupdown-multi
 
