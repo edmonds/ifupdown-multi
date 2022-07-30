@@ -1,3 +1,9 @@
+ifupdown-multi (1.0.1) UNRELEASED; urgency=medium
+
+  * Use secure copyright file specification URI.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Sat, 30 Jul 2022 22:28:02 -0000
+
 ifupdown-multi (1.0.0) unstable; urgency=medium
 
   * README.md: fix name of multi_gateway_preferred_prefixes option in
